@@ -68,7 +68,8 @@ jobs:
     # - name: Verify seleniumbase install from PyPI
     #   run: |
     #     pip install seleniumbase -U --no-deps --force-reinstall --no-cache-dir
-
+    - name: Setup headless display
+      uses: pyvista/setup-headless-display-action@v3
     - name: Custom Script to Test cloudflare
       run: |
         python examples/raw_recaptcha.py --browser=chrome
