@@ -4,6 +4,8 @@ on:
   push:
   # schedule:
   #   - cron: "50 1 * * *"
+    branches:
+      - main
   workflow_dispatch:
     branches:
 
