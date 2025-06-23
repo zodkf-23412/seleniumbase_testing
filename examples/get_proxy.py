@@ -11,7 +11,7 @@ def get_and_set_selenium_proxy_for_github_actions():
     The output will be captured by GitHub Actions and used to set the
     environment variable for subsequent steps.
     """
-    proxy_list_url = "[https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/socks5/data.txt](https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/socks5/data.txt)"
+    proxy_list_url = "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/socks5/data.txt"
     proxy_env_var_name = "SELENIUM_PROXY"
 
     print(f"Attempting to fetch SOCKS5 proxies from: {proxy_list_url}")
