@@ -69,6 +69,8 @@ jobs:
     - run: |
         sudo apt-get install -y xvfb
         python -m pip install pyautogui
+        chmod +x integrations/linux/Xvfb_launcher.sh
+        integrations/linux/Xvfb_launcher.sh
     - name: Custom Script to Test cloudflare
       run: |
         python examples/raw_recaptcha.py --browser=chrome
