@@ -1,6 +1,6 @@
 from seleniumbase import SB
 from pyvirtualdisplay import Display
-with SB(uc=True, test=True, incognito=True) as sb:
+with SB(uc=True, test=True,  xvfb=True) as sb:
     url = "https://seleniumbase.io/apps/recaptcha"
     sb.activate_cdp_mode(url)
     sb.sleep(1)
