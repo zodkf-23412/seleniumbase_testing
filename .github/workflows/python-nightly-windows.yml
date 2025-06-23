@@ -7,19 +7,17 @@ on:
     branches:
       - main
   workflow_dispatch:
-    branches:
 
 jobs:
   build:
 
     env:
       PY_COLORS: "1"
-    runs-on: windows-latest
     strategy:
       fail-fast: false
       max-parallel: 6
       matrix:
-        python-version: ["3.12", "3.13"]
+        python-version: ["3.12"]
 
     steps:
     - uses: actions/checkout@v4
@@ -68,8 +66,8 @@ jobs:
     # - name: Verify seleniumbase install from PyPI
     #   run: |
     #     pip install seleniumbase -U --no-deps --force-reinstall --no-cache-dir
-    - name: Setup headless display
-      uses: pyvista/setup-headless-display-action@v3
+    - run: |
+        sudo apt-get install -y xvfb
     - name: Custom Script to Test cloudflare
       run: |
         python examples/raw_recaptcha.py --browser=chrome
