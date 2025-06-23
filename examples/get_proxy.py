@@ -30,7 +30,7 @@ def get_and_set_selenium_proxy_for_github_actions():
         # In a real-world scenario, you might want to implement proxy testing
         # to ensure it's functional before using it.
         selected_proxy_ip_port = proxies[0]
-        proxy_string = f"socks5://{selected_proxy_ip_port}"
+        proxy_string = selected_proxy_ip_port
 
         # GitHub Actions special command to set an environment variable for subsequent steps
         # This will write "SELENIUM_PROXY=socks5://IP_ADDRESS:PORT" to the GITHUB_ENV file
