@@ -68,6 +68,7 @@ jobs:
     #     pip install seleniumbase -U --no-deps --force-reinstall --no-cache-dir
     - run: |
         sudo apt-get install -y xvfb
+        python -m pip install pyautogui
     - name: Custom Script to Test cloudflare
       run: |
         python examples/raw_recaptcha.py --browser=chrome
